@@ -1,0 +1,55 @@
+<!-- <!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Qunit Spec Runner</title>
+    <link rel="stylesheet" href="../bower_components/qunit/qunit/qunit.css">
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <script src="../bower_components/qunit/qunit/qunit.js"></script>
+    <script src="spec/test.js"></script>
+    <div id="qunit"></div>
+  </body>
+</html> -->
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mocha Spec Runner</title>
+  <link rel="stylesheet" href="../bower_components/mocha/mocha.css">
+  <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+
+  <script src="../bower_components/underscore/underscore-min.js"></script>
+  <script src="../bower_components/backbone/backbone-min.js"></script>
+  <script src="../bower_components/mocha/mocha.js"></script>
+  <script src="../bower_components/chai/chai.js"></script>
+  <script>
+    mocha.setup('bdd');
+    assert = chai.assert;
+    expect = chai.expect;
+    should = chai.should();
+  </script>
+  <script src="spec/test.js"></script>
+  <script>
+    window.onload = function() {
+      if (navigator.userAgent.indexOf('PhantomJS') === -1) {
+
+        mocha.run();
+
+        // describe('Testing x + y ', function () {
+        //   // console.log("ModelBackbone ", model.get('title'));
+        //   // console.log("describe", expect('title-here').to.equal('title-here'));
+        //   expect(3).be.to.equal(3);
+        // });
+      }
+    }
+
+  </script>
+</head>
+<body>
+
+  <div id="mocha"></div>
+</body>
+</html>
